@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+## `To start a React application: We use npm (node packet manager),` 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## `Install nodejs`
+React dev tools (add browser extension).
+( to setup all the files and folders, packages, etc.)
+```
+    npx create-react-app my-app 
+```
+```
+    cd my-app
+```
+(To start the dev server: for ex: (http://localhost:3000)
+```
+    npm start 
+```
+In React we cannot change the state, else we use useState to change any objects.
+To install icons in React, we use:
+```
+    npm i react-icons
+```
+`For production:`
 
-## Available Scripts
+To build for production: npm run build, it creates “build” folder which is used to deploy.
+To push the build folder locally we use: 
+(for mac/linux),
+```
+    sudo npm i -g serve  
+```
+it is basically a http server.
+To serve build folder on any port: 
+```
+    serve -s build -p 8000  (http://localhost:8000)
+```
 
-In the project directory, you can run:
+`To deal with Back-end :`
 
-### `npm start`
+We use JSON server to create a mock rest API, to use our own data.
+```
+    npm i json-server 
+```
+To run this, we add a script to the package.json folder called,
+"server": "json-server --watch db.json --port 3000"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+    npm run server (which creates db.json)
+```
+Again we run our dev server with - 
+```
+    npm start
+```
+Then after creating the database in the db.json by adding json objects, we run
+- to fetch task from backend: http://localhost:5001/appointments
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## `We use a hook called “useEffect” to load effects on the page loads.`
 
-### `npm test`
+To delete data from the server : 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We use method: ‘DELETE’
+```
+    const onDelete = async (id) => {
+    await fetch(`http://localhost:5001/appointments/${id}`,{
+      method: 'DELETE'
+    })
+    setAppointment(appointment.filter((appointments) => appointments.id !== id))
+  }
+```
 
-### `npm run build`
+To Add data :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We use method: ‘POST’
+```
+     const setAppointmentDetails = async (content) => {
+    await fetch('http://localhost:5001/appointments', {
+        method: 'POST',
+        headers: {'Content-type':'application/json'},
+        body: JSON.stringify(content)
+    })
+  }
+```

@@ -77,3 +77,25 @@ We use method: ‘POST’
     })
   }
 ```
+
+# Components
+
+- Header.js : It contains the nav bar of the viewport.
+
+- Home.js: It contains the UI of the home page containg the radio button. It will direct user to the client section on the basis of client selection.
+
+- Radio.js: It contains a form which lets us to select any of the selection by clicking the radio button.
+
+- AppointmentForm.js: It conatins an article which has a section containing a button which lets us to fill the details on the form to book an appointment.
+
+- Form.js: It contains the form which take the values and store it to the database. To store the details to the database, it uses the fetch api using async and await to fetch the data from the database and then use the method: 'POST' to save the patient details via form.
+
+- Login.js: It conatins a form which uses onLogin function to compare the value from the form with the stores employee_id and password in the database. If the details match, it logins the employee to their respective portal.
+
+- DoctorPortal.js: It conatins an article containing the form which will show the scheduled patient details when the respective date is selected.
+
+- PatientDetail.js: This conatins an article which filters the matched appointment date from the database and then reflect it over the UI.
+
+- PatientDetails.js: This conatin a section containing the details of the patient with the icons to add the delete and rescheduling the appointment date property.
+
+- ReSchedule.js: It contains a form which takes the date to reschedule the apointment and stores it in the database, which can be reflected over the UI by selecting the same date.

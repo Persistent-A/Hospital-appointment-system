@@ -37,18 +37,6 @@
       "id": 5
     },
     {
-      "name": "Lakhu",
-      "age": "54",
-      "phone": "3417864517",
-      "email": "lakhu@gmail.com",
-      "address": "Kolkata",
-      "adhaar": "23784568273465",
-      "date": "2022-12-08",
-      "department": "er",
-      "reArranged": false,
-      "id": 6
-    },
-    {
       "name": "lakha",
       "age": "45",
       "phone": "9854732667",
@@ -83,18 +71,6 @@
       "department": "er",
       "reArranged": false,
       "id": 10
-    },
-    {
-      "name": "",
-      "age": "",
-      "phone": "",
-      "email": "",
-      "address": "",
-      "adhaar": "",
-      "date": "",
-      "department": "",
-      "reArranged": false,
-      "id": 11
     }
   ],
   "doctors": [

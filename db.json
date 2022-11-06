@@ -1,0 +1,97 @@
+{
+  "appointments": [
+    {
+      "id": 1,
+      "name": "Rohan",
+      "age": "28",
+      "phone": "4582999113",
+      "email": "rohan@example.com",
+      "address": "Delhi",
+      "adhaar": "52892973662",
+      "date": "01/12/2022",
+      "department": "er"
+    },
+    {
+      "name": "Aditi",
+      "age": "23",
+      "phone": "6719273633",
+      "email": "aditi@example.com",
+      "address": "Hyderabad",
+      "adhaar": "78208476473",
+      "date": "2022-11-04",
+      "department": "neuro",
+      "id": 3
+    },
+    {
+      "name": "Abhi",
+      "age": "34",
+      "phone": "982638300",
+      "email": "abhi@example.com",
+      "address": "hyderabad",
+      "adhaar": "782910937837",
+      "date": "",
+      "department": "er",
+      "id": 4
+    },
+    {
+      "name": "Jk",
+      "age": "34",
+      "phone": "9843765298",
+      "email": "jk@example.com",
+      "address": "Mumbai",
+      "adhaar": "8762395734",
+      "date": "2022-11-03",
+      "department": "neuro",
+      "id": 5
+    },
+    {
+      "name": "Lakhu",
+      "age": "54",
+      "phone": "3417864517",
+      "email": "lakhu@gmail.com",
+      "address": "Kolkata",
+      "adhaar": "23784568273465",
+      "date": "",
+      "department": "er",
+      "id": 6
+    },
+    {
+      "name": "lakha",
+      "age": "45",
+      "phone": "9854732667",
+      "email": "lakha@gmail.com",
+      "address": "Tamilnadu",
+      "adhaar": "2978354952846",
+      "date": "",
+      "department": "er",
+      "id": 8
+    },
+    {
+      "name": "Ananymous",
+      "age": "56",
+      "phone": "9674892032",
+      "email": "ananymous@ex.com",
+      "address": "ananymous lane, st 21",
+      "adhaar": "829379398289",
+      "date": "2022-11-29",
+      "department": "neuro",
+      "id": 9
+    }
+  ],
+  "doctors": [
+    {
+      "name": "Dr. Jay Shah",
+      "employee_Id": "123",
+      "password": "jay",
+      "department": "er",
+      "id": 1
+    },
+    {
+      "name": "Dr. Preet Kansara",
+      "employee_Id": "456",
+      "password": "preet",
+      "department": "neuro",
+      "id": 2
+    }
+  ]
+}

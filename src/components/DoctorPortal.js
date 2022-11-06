@@ -21,11 +21,7 @@ const DoctorPortal = ({showDetails, appointment, onDelete, logedDocDep, toggleRe
             </div>
             <input type='submit' value='Click to Check' />
         </form>
-        {isDetails && <PatientDetail appointment={appointment} date={date} onDelete={onDelete} logedDocDep={logedDocDep} 
-        toggleReminder={toggleReminder}
-        isRescheduled={isRescheduled} 
-        setReDate={setReDate} reDate={reDate}
-        changeDate={changeDate}
+        {isDetails && <PatientDetail appointment={appointment} date={date} onDelete={onDelete} logedDocDep={logedDocDep} toggleReminder={toggleReminder} isRescheduled={isRescheduled} setReDate={setReDate} reDate={reDate} changeDate={changeDate}
         />}
     </article>
   )

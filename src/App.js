@@ -36,7 +36,6 @@ function App() {
     getDoctors()
   },[])
   
-
   const fetchAppointments = async () => {
     const res = await fetch('http://localhost:5001/appointments')
     const data = await res.json()
@@ -97,11 +96,23 @@ function App() {
     setAppointment(appointment.filter((appointments) => appointments.id !== id))
   }
 
-  const toggleReminder = () =>{
-    setIsRescheduled(!isRescheduled)
+  const toggleReminder = async (id) =>{
+    const res = await fetch(`http://localhost:5001/appointments/${id}`)
+    const data = await res.json()
+    const updatedAppo = {...data, reArranged: !data.reArranged}
+
+    const upAppo = await fetch(`http://localhost:5001/appointments/${id}`,{
+      method: 'PUT',
+      headers: {'content-type':'application/json'},
+      body: JSON.stringify(updatedAppo)
+    })
+    const upAppoBody = await upAppo.json()
+    setAppointment(appointment.map((appointment) => (
+      appointment.id === id ? {...appointment, reArranged:upAppoBody.reArranged} : appointment )))
   }
 
   const changeDate = async (id) => {
+    
     const res = await fetch(`http://localhost:5001/appointments/${id}`)
     const data = await res.json()
     const updatedAppo = {...data, date: reDate}

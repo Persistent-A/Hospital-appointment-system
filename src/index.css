@@ -287,6 +287,10 @@ input:focus{
   cursor: pointer;
 }
 
+.date-change, .reschedule-btn {
+  border: 1px solid red;
+}
+
 
 
 

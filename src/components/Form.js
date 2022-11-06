@@ -12,11 +12,12 @@ const Form = ({setAppointmentDetails}) => {
     const[adhaar, setAdhaar] = useState('')
     const[date, setDate] = useState('')
     const[department, setDepartment] = useState('')
+    const reArranged = false
 
     const setAppointment = (e) => {
         e.preventDefault()
         console.log(department)
-        setAppointmentDetails({name, age, phone, email, address, adhaar, date, department})
+        setAppointmentDetails({name, age, phone, email, address, adhaar, date, department, reArranged})
         setName('')
         setAge('')
         setPhone('')

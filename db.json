@@ -1,17 +1,6 @@
 {
   "appointments": [
     {
-      "id": 1,
-      "name": "Rohan",
-      "age": "28",
-      "phone": "4582999113",
-      "email": "rohan@example.com",
-      "address": "Delhi",
-      "adhaar": "52892973662",
-      "date": "01/12/2022",
-      "department": "er"
-    },
-    {
       "name": "Aditi",
       "age": "23",
       "phone": "6719273633",
@@ -20,6 +9,7 @@
       "adhaar": "78208476473",
       "date": "2022-11-04",
       "department": "neuro",
+      "reArranged": false,
       "id": 3
     },
     {
@@ -29,8 +19,9 @@
       "email": "abhi@example.com",
       "address": "hyderabad",
       "adhaar": "782910937837",
-      "date": "",
+      "date": "2022-12-08",
       "department": "er",
+      "reArranged": true,
       "id": 4
     },
     {
@@ -40,8 +31,9 @@
       "email": "jk@example.com",
       "address": "Mumbai",
       "adhaar": "8762395734",
-      "date": "2022-11-03",
+      "date": "2022-11-29",
       "department": "neuro",
+      "reArranged": false,
       "id": 5
     },
     {
@@ -51,8 +43,9 @@
       "email": "lakhu@gmail.com",
       "address": "Kolkata",
       "adhaar": "23784568273465",
-      "date": "",
+      "date": "2022-12-08",
       "department": "er",
+      "reArranged": false,
       "id": 6
     },
     {
@@ -62,8 +55,9 @@
       "email": "lakha@gmail.com",
       "address": "Tamilnadu",
       "adhaar": "2978354952846",
-      "date": "",
+      "date": "2022-12-08",
       "department": "er",
+      "reArranged": false,
       "id": 8
     },
     {
@@ -75,7 +69,32 @@
       "adhaar": "829379398289",
       "date": "2022-11-29",
       "department": "neuro",
+      "reArranged": false,
       "id": 9
+    },
+    {
+      "name": "Mrunal",
+      "age": "45",
+      "phone": "8765418565",
+      "email": "muthu@gmail.com",
+      "address": "Ave Mountain",
+      "adhaar": "982574365267934",
+      "date": "2022-11-29",
+      "department": "er",
+      "reArranged": false,
+      "id": 10
+    },
+    {
+      "name": "",
+      "age": "",
+      "phone": "",
+      "email": "",
+      "address": "",
+      "adhaar": "",
+      "date": "",
+      "department": "",
+      "reArranged": false,
+      "id": 11
     }
   ],
   "doctors": [

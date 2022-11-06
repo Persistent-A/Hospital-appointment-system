@@ -1,12 +1,15 @@
-import Button from './Button'
-const ReSchedule = ({setReDate, reDate, changeDate}) => {
-    
+const ReSchedule = ({setReDate, reDate, changeDate, id}) => {
+    const onSubmit = (e) => {
+      e.preventDefault()
+      changeDate(id)
+      setReDate('')
+    }
   return (
-    <section>
+    <form onSubmit={onSubmit}>
         <label>Select date to reschedule the appoinment: </label>
         <input type="date" value={reDate} onChange={(e)=>setReDate(e.target.value)}/>
-        <Button text='Save' cls='date-change' onClick={changeDate}/>
-    </section>
+        <input type='submit' value='Save' />
+    </form>
   )
 }
 
